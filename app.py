@@ -12,9 +12,9 @@ def app():
     seca = pd.read_excel('radix.xlsx',sheet_name="sede")
 
     #calculando a media das variaveis quantitativas
-    normal_media = normal.groupby('Espécie')['Peso seco g','N.Raizes','Comprimento CM'].mean().reset_index()
+    normal_media = normal.groupby('Espécie')['Peso seco g','N.Raizes','Comprimento CM'].median().reset_index()
     normal_media.columns = ['Material genético', 'Peso seco medio','N.Raizes medio', 'Comprimento CM medio']
-    seca_media = seca.groupby('Espécie')['Peso seco g','N.Raizes','Comprimento CM'].mean().reset_index()
+    seca_media = seca.groupby('Espécie')['Peso seco g','N.Raizes','Comprimento CM'].median().reset_index()
     seca_media.columns = ['Material genético', 'Peso seco medio','N.Raizes medio', 'Comprimento CM medio']
     normal_media['Irrigado'] = 'comum'
     seca_media['Irrigado'] = 'deficit'
