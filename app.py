@@ -2,12 +2,6 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import streamlit as st
-import io
-from io import BytesIO
-import datetime
-import re
-import base64
-from PIL import Image
 
 #famoso back
 
