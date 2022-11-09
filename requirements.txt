@@ -4,3 +4,4 @@ plotly==5.10.0
 numpy==1.21.6
 zipp==3.8.1
 GitPython==3.1.27
+openpyxl==3.0.10
