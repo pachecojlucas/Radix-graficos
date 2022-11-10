@@ -44,7 +44,8 @@ def app():
     #Gráfico de barras
     st.write("Gráfico de barras - " , label, "dentro de cada material genético")
     barra_Matgen = px.bar(tabela_resumo, x= "Irrigado",y =coluna, 
-    color='Material genético',barmode='group', xaxis={'categoryorder': 'total ascending'})
+    color='Material genético',barmode='group')
+    barra_Matgen.update_layout(xaxis={'categoryorder': 'total ascending'})
 
     st.plotly_chart(barra_Matgen, use_container_width=True)
 
